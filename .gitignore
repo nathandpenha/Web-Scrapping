@@ -1,0 +1,8 @@
+.DS_Store
+.idea/Web-Scrapping.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+geckodriver.log
+venv/

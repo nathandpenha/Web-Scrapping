@@ -1,5 +1,6 @@
 import random
 import os
+import itertools
 
 alpha = []
 for x in range(97, 123):
@@ -7,10 +8,31 @@ for x in range(97, 123):
 
 name = ""
 
-for x in range(0, 5):
+for x in range(random.randint(5, 9)):
 	name += random.choice(alpha)
 
 print("Name : ", name)
 
-
 print(os.name)
+
+print(list(itertools.permutations([1, 2, 3, 4], 2)))
+
+
+def random_year():
+	year = []
+	for x in range(1900, 2000):
+		year.append(x)
+	
+	return random.choice(year)
+
+
+print(random_year())
+
+
+def random_gender():
+	options = ["Male", "Female"]
+	return random.choice(options)
+
+
+for x in range(10):
+	print(random_gender())

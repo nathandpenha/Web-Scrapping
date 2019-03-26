@@ -196,3 +196,31 @@ en.send_keys(random_name())
 en = driver.find_element_by_id("email-form")
 en.send_keys(random_name(), "@", random_name(), '.com')
 en.send_keys(Keys.ENTER)
+
+time.sleep(TIME)
+
+
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[1]/td[1]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[1]/td[2]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[2]/td[1]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[2]/td[2]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[3]/td[1]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[3]/td[2]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[4]/td[1]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[4]/td[2]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[5]/td[1]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[5]/td[2]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[6]/td[1]')
+print(en.text);
+en = driver.find_element_by_xpath('//*[@id="ingTableBody"]/tr[6]/td[2]')
+print(en.text);

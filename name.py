@@ -36,3 +36,6 @@ def random_gender():
 
 for x in range(10):
 	print(random_gender())
+
+
+options = {1: "weightlifting", 2: "Cardio", 3: "Sports", 4: "Yoga", 5: "Dance", 6: "Swimming", 7: "Others"}

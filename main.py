@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 fileName = "output/" + str(time.strftime("%H-%M-%S___%d-%m-%Y")) + ".txt"
-TIME = 7
+TIME = 8
 PREFIX_TAB = "\t\t"
 NEW_LINE = "\n"
 
@@ -75,13 +75,14 @@ def protein_powder_take():
 # Open File
 fileHandler = open(fileName, "a")
 
-for x in range(1, 31):
+for x in range(1, 6):
 	if os.name == "posix":
 		driver = webdriver.Chrome(executable_path="/Users/akasharora/PycharmProjects/Web-Scrapping/chromedriver")
 	else:
 		driver = webdriver.Chrome('chromedriver.exe')
+	# driver.maximize_window()
 	fileHandler.write("***********************************************************************************" + NEW_LINE)
-	fileHandler.write("Test #" + str(x) + NEW_LINE)
+	fileHandler.write("Test #" + str(x+26) + NEW_LINE)
 	fileHandler.write("\tInputs" + NEW_LINE)
 	# Open Link
 	gender = random_gender()
@@ -155,7 +156,12 @@ for x in range(1, 31):
 	
 	# Type of Exercise
 	type_ex = question_type_exercise()
-	en = driver.find_element_by_xpath("//*[@id='question9choice" + str(type_ex) + "']")
+	try:
+		en = driver.find_element_by_xpath('//*[@id="question9choice' + str(type_ex) + '"]')
+	except:
+		driver.refresh()
+		time.sleep(TIME)
+		en = driver.find_element_by_xpath('//*[@id="question9choice' + str(type_ex) + '"]')
 	options = {1: "weightlifting", 2: "Cardio", 3: "Sports", 4: "Yoga", 5: "Dance", 6: "Swimming", 7: "Others"}
 	fileHandler.write(PREFIX_TAB + "Type of Exercise : " + options[type_ex] + NEW_LINE)
 	en.click()
@@ -189,7 +195,12 @@ for x in range(1, 31):
 	
 	# Why take Protein Powder
 	protein = protein_powder_take()
-	en = driver.find_element_by_xpath('//*[@id="question3choice' + str(protein) + '"]')
+	try:
+		en = driver.find_element_by_xpath('//*[@id="question3choice' + str(protein) + '"]')
+	except:
+		driver.refresh()
+		time.sleep(TIME)
+		en = driver.find_element_by_xpath('//*[@id="question3choice' + str(protein) + '"]')
 	en.click()
 	options = {
 		1: "Lose Weight",

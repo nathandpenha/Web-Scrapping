@@ -28,12 +28,17 @@ def random_name():
 	return name
 
 
-def random_year():
-	year = []
-	for x in range(1920, 2000):
+def random_year(a):
+        
+
+	year =a+1;
+	return year
+	'''
+	for x in range(1970, 2000):
 		year.append(x)
 	
 	return random.choice(year)
+	'''
 
 
 def random_date():
@@ -74,7 +79,7 @@ def protein_powder_take():
 
 # Open File
 fileHandler = open(fileName, "a")
-
+p_year=1969
 for x in range(1, 6):
 	if os.name == "posix":
 		driver = webdriver.Chrome(executable_path="/Users/akasharora/PycharmProjects/Web-Scrapping/chromedriver")
@@ -98,7 +103,9 @@ for x in range(1, 6):
 	# Select DOB
 	month = str(random_month())
 	day = str(random_date())
-	year = str(random_year())
+	year = str(random_year(p_year))
+	p_year=year
+	
 	elem = driver.find_element_by_id("dob-month")
 	elem.send_keys(month)
 	elem = driver.find_element_by_id("dob-day")

@@ -1,0 +1,137 @@
+***********************************************************************************
+Test for Type Of Exercise weightlifting
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Toned/Muscular
+		Height : 5'9"
+		Current Weight : 145 lbs
+		Goal Weight : 215 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : weightlifting
+		Why take Protein Powder : Build Muscle
+		Used Protein Powder Before : No
+		Time to take Protein Powder : During Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 3
+		Dietary Restrictions : None
+		Preferred Flavor :Chocolate
+
+	Output
+	Whey Protein Isolate	82.4
+	Maltodextrin	8.8
+	Dextrose	4.4
+	Organic Cocoa Powder	3.3
+	Natural Chocolate Flavoring	0.7
+	Organic Stevia Sweetener	0.5
+
+***********************************************************************************
+Test for Type Of Exercise Cardio
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Toned/Muscular
+		Height : 5'9"
+		Current Weight : 145 lbs
+		Goal Weight : 215 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : Cardio
+		Why take Protein Powder : Build Muscle
+		Used Protein Powder Before : No
+		Time to take Protein Powder : During Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 3
+		Dietary Restrictions : None
+		Preferred Flavor :Vanilla
+
+	Output
+	Whey Protein Isolate	84.0
+	Maltodextrin	9.8
+	Dextrose	4.4
+	Natural Vanilla Flavoring	1.3
+	Organic Stevia Sweetener	0.5
+
+***********************************************************************************
+Test for Type Of Exercise Yoga
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Toned/Muscular
+		Height : 5'9"
+		Current Weight : 145 lbs
+		Goal Weight : 215 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : Yoga
+		Why take Protein Powder : Build Muscle
+		Used Protein Powder Before : No
+		Time to take Protein Powder : During Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 3
+		Dietary Restrictions : None
+		Preferred Flavor :Vanilla
+
+	Output
+	Whey Protein Isolate	84.0
+	Maltodextrin	9.8
+	Dextrose	4.4
+	Natural Vanilla Flavoring	1.3
+	Organic Stevia Sweetener	0.5
+
+***********************************************************************************
+Test for Type Of Exercise Dance
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Toned/Muscular
+		Height : 5'9"
+		Current Weight : 145 lbs
+		Goal Weight : 215 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : Dance
+		Why take Protein Powder : Build Muscle
+		Used Protein Powder Before : No
+		Time to take Protein Powder : During Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 3
+		Dietary Restrictions : None
+		Preferred Flavor :Vanilla
+
+	Output
+	Whey Protein Isolate	84.0
+	Maltodextrin	9.8
+	Dextrose	4.4
+	Natural Vanilla Flavoring	1.3
+	Organic Stevia Sweetener	0.5
+***********************************************************************************
+Test for Type Of Exercise Swimming
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Toned/Muscular
+		Height : 5'9"
+		Current Weight : 145 lbs
+		Goal Weight : 215 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : Swimming
+		Why take Protein Powder : Build Muscle
+		Used Protein Powder Before : No
+		Time to take Protein Powder : During Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 3
+		Dietary Restrictions : None
+		Preferred Flavor :Chocolate
+
+	Output
+	Whey Protein Isolate	82.4
+	Maltodextrin	8.8
+	Dextrose	4.4
+	Organic Cocoa Powder	3.3
+	Natural Chocolate Flavoring	0.7
+	Organic Stevia Sweetener	0.5
+
+-----------------------------------------END-----------------------------------------

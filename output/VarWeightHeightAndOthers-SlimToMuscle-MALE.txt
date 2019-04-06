@@ -1,0 +1,140 @@
+***********************************************************************************
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Muscular
+		Height : 5'9"
+		Current Weight : 190 lbs
+		Goal Weight : 190 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : Swimming
+		Why take Protein Powder : Meal Supplement
+		Used Protein Powder Before : Yes
+		Time to take Protein Powder : I'm not sure
+		Hours of Sleep : 7
+		Meals Each Day : 4 or More
+		Dietary Restrictions : None
+		Preferred Flavor :Vanilla
+
+	Output
+	Whey Protein Isolate	46.9
+	Whey Protein Concentrate	37.1
+	Maltodextrin	6.5
+	Dextrose	3.8
+	Organic Oat Powder	3.8
+	Natural Vanilla Flavoring	1.3
+	Organic Stevia Sweetener	0.5
+
+***********************************************************************************
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim/Toned
+		Goal Body Type :Muscular
+		Height : 5'6"
+		Current Weight : 160 lbs
+		Goal Weight : 220 lbs
+		Exercise @ Times/Week : 1 or Less
+		Type of Exercise : Swimming
+		Why take Protein Powder : Sports Performance
+		Used Protein Powder Before : No
+		Time to take Protein Powder : Before Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 4 or More
+		Dietary Restrictions : None
+		Preferred Flavor :Chocolate
+
+	Output
+	Whey Protein Isolate	82.4
+	Maltodextrin	8.8
+	Dextrose	4.4
+	Organic Cocoa Powder	3.3
+	Natural Chocolate Flavoring	0.7
+	Organic Stevia Sweetener	0.5
+
+***********************************************************************************
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim/Toned
+		Goal Body Type :Muscular
+		Height : 5'5"
+		Current Weight : 155 lbs
+		Goal Weight : 225 lbs
+		Exercise @ Times/Week : 2-3
+		Type of Exercise : Swimming
+		Why take Protein Powder : Look Bigger
+		Used Protein Powder Before : No
+		Time to take Protein Powder : During Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 2 or  Less
+		Dietary Restrictions : None
+		Preferred Flavor :Vanilla
+
+	Output
+	Whey Protein Concentrate	37.4
+	Maltodextrin	25.0
+	Organic Oat Powder	13.9
+	Organic Sunflower Oil Powder	13.9
+	Dextrose	6.9
+	BCAA Blend	1.4
+	Natural Vanilla Flavoring	1.1
+	Organic Stevia Sweetener	0.4
+
+***********************************************************************************
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Muscular
+		Height : 5'2"
+		Current Weight : 130 lbs
+		Goal Weight : 250 lbs
+		Exercise @ Times/Week : 2-3
+		Type of Exercise : Swimming
+		Why take Protein Powder : Lose Weight
+		Used Protein Powder Before : Yes
+		Time to take Protein Powder : I'm not sure
+		Hours of Sleep : 7
+		Meals Each Day : 2 or  Less
+		Dietary Restrictions : None
+		Preferred Flavor :Chocolate
+
+	Output
+	Whey Protein Concentrate	46.9
+	Whey Protein Isolate	34.4
+	Micellar Casein	12.0
+	Organic Cocoa Powder	3.3
+	Green Tea Extract	1.6
+	Natural Chocolate Flavoring	1.3
+	Organic Stevia Sweetener	0.5
+
+***********************************************************************************
+	Inputs
+		Gender : Male
+		DOB : 01/01/1980
+		Current Body Type : Slim
+		Goal Body Type :Muscular
+		Height : 4'11"
+		Current Weight : 95 lbs
+		Goal Weight : 285 lbs
+		Exercise @ Times/Week : 4 or more
+		Type of Exercise : Swimming
+		Why take Protein Powder : Sports Performance
+		Used Protein Powder Before : Yes
+		Time to take Protein Powder : Before Exercise
+		Hours of Sleep : 7
+		Meals Each Day : 2 or  Less
+		Dietary Restrictions : None
+		Preferred Flavor :Chocolate
+
+	Output
+	Whey Protein Isolate	82.4
+	Maltodextrin	8.8
+	Dextrose	4.4
+	Organic Cocoa Powder	3.3
+	Natural Chocolate Flavoring	0.7
+	Organic Stevia Sweetener	0.5
+
+-----------------------------------------END-----------------------------------------

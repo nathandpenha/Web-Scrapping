@@ -42,43 +42,12 @@ for increase_offset in [0, 80, 120, 160, 250]:
 	# Open Link
 	gender = "Male"
 	fileHandler.write(PREFIX_TAB + "Gender : " + gender + NEW_LINE)
-	driver.get("https://www.gainful.com/consultation/?gender=" + gender)
-	time.sleep(TIME)
+	#driver.get("https://www.gainful.com/consultation/?gender=" + gender)
+	#time.sleep(TIME)
 	# Select Input -> Gender
-	elem = driver.find_element_by_id("question7choice1")
-	elem.submit()
+	#elem = driver.find_element_by_id("question7choice1")
+	#elem.submit()
 	driver.get("https://www.gainful.com/consultation/?gender=" + gender)
-	time.sleep(TIME)
-	
-	# DOB
-	month = "01"
-	day = "01"
-	year = "1980"
-	elem = driver.find_element_by_id("dob-month")
-	elem.send_keys(month)
-	elem = driver.find_element_by_id("dob-day")
-	elem.send_keys(day)
-	elem = driver.find_element_by_id("dob-year")
-	elem.send_keys(year)
-	fileHandler.write(PREFIX_TAB + "DOB : " + day + "/" + month + "/" + year + NEW_LINE)
-	elem.send_keys(Keys.ENTER)
-	time.sleep(TIME)
-	elem.send_keys(Keys.ENTER)
-	time.sleep(TIME)
-	
-	# Body Type
-	en = driver.find_element_by_xpath("//*[@id='question_form']/div[1]/input")
-	move = ActionChains(driver)
-	move.click_and_hold(en).move_by_offset(-250, 0).release().perform()
-	fileHandler.write(PREFIX_TAB + "Current Body Type : " + driver.find_element_by_xpath(
-		"//*[@id='question_form']/div[1]/output").text + NEW_LINE)
-	time.sleep(TIME)
-	en = driver.find_element_by_xpath("//*[@id='question_form']/div[1]/section/input")
-	move = ActionChains(driver)
-	move.click_and_hold(en).move_by_offset(100, 0).release().perform()
-	fileHandler.write(PREFIX_TAB + "Goal Body Type :" + driver.find_element_by_xpath(
-		"//*[@id='question_form']/div[1]/section/output").text + NEW_LINE)
-	en.send_keys(Keys.ENTER)
 	time.sleep(TIME)
 	
 	# Physical Attributes -> Height / Current Weight / Goal Weight
@@ -109,7 +78,7 @@ for increase_offset in [0, 80, 120, 160, 250]:
 	fileHandler.write(PREFIX_TAB + "Exercise @ Times/Week : " + ex_text + NEW_LINE)
 	en.send_keys(Keys.ENTER)
 	time.sleep(TIME)
-	
+
 	# Type of Exercise
 	type_ex = 7
 	try:
@@ -123,6 +92,15 @@ for increase_offset in [0, 80, 120, 160, 250]:
 	en.click()
 	en.send_keys(Keys.ENTER)
 	time.sleep(TIME)
+	
+	# Used Protein Before ?
+	used_powder = random.choice([1, 2])
+	en = driver.find_element_by_xpath("//*[@id='question5choice" + str(used_powder) + "']")
+	en.click()
+	fileHandler.write(PREFIX_TAB + "Used Protein Powder Before : " + ("Yes" if used_powder == 1 else "No") + NEW_LINE)
+	en.send_keys(Keys.ENTER)
+	time.sleep(TIME)
+
 	
 	# Why take Protein Powder
 	protein = random.choice([2, 3, 4, 5, 6, 7, 8, 9])
@@ -146,41 +124,8 @@ for increase_offset in [0, 80, 120, 160, 250]:
 	fileHandler.write(PREFIX_TAB + "Why take Protein Powder : " + options[protein] + NEW_LINE)
 	en.send_keys(Keys.ENTER)
 	time.sleep(TIME)
-	
-	# Used Protein Before ?
-	used_powder = random.choice([1, 2])
-	en = driver.find_element_by_xpath("//*[@id='question5choice" + str(used_powder) + "']")
-	en.click()
-	fileHandler.write(PREFIX_TAB + "Used Protein Powder Before : " + ("Yes" if used_powder == 1 else "No") + NEW_LINE)
-	en.send_keys(Keys.ENTER)
-	time.sleep(TIME)
-	
-	# When will you take Protein Powder
-	time_protein = random.choice([0, 1, 2, 3, 4, 5, 6])
-	options = {
-		0: "During Exercise",
-		1: "After Waking Up",
-		2: "Before Exercise",
-		3: "After Exercise",
-		4: "Before Bed",
-		5: "I'm not sure",
-		6: "Whenever I can"
-	}
-	en = driver.find_element_by_xpath("//*[@id='question10choice" + str(time_protein) + "']")
-	en.click()
-	fileHandler.write(PREFIX_TAB + "Time to take Protein Powder : " + options[time_protein] + NEW_LINE)
-	en.send_keys(Keys.ENTER)
-	time.sleep(TIME)
-	
-	# Hours of Sleep
-	en = driver.find_element_by_xpath('//*[@id="question_form"]/div/input')
-	move = ActionChains(driver)
-	move.click_and_hold(en).move_by_offset(0, 0).release().perform()
-	en.send_keys(Keys.ENTER)
-	fileHandler.write(PREFIX_TAB + "Hours of Sleep : " + driver.find_element_by_xpath(
-		'//*[@id="question_form"]/div/output').text + NEW_LINE)
-	time.sleep(TIME)
-	
+
+
 	# Meals each day
 	meals = random.choice([1, 2, 3])
 	en = driver.find_element_by_xpath("//*[@id='question81choice" + str(meals) + "']")
@@ -193,6 +138,8 @@ for increase_offset in [0, 80, 120, 160, 250]:
 	fileHandler.write(PREFIX_TAB + "Meals Each Day : " + options[meals] + NEW_LINE)
 	en.send_keys(Keys.ENTER)
 	time.sleep(TIME)
+
+
 	
 	# Dietary Restrictions
 	rest = 8
@@ -211,6 +158,71 @@ for increase_offset in [0, 80, 120, 160, 250]:
 	en.send_keys(Keys.ENTER)
 	fileHandler.write(PREFIX_TAB + "Dietary Restrictions : " + options[rest] + NEW_LINE)
 	time.sleep(TIME)
+	
+	# Hours of Sleep
+	en = driver.find_element_by_xpath('//*[@id="question_form"]/div/input')
+	move = ActionChains(driver)
+	move.click_and_hold(en).move_by_offset(0, 0).release().perform()
+	en.send_keys(Keys.ENTER)
+	fileHandler.write(PREFIX_TAB + "Hours of Sleep : " + driver.find_element_by_xpath(
+		'//*[@id="question_form"]/div/output').text + NEW_LINE)
+	time.sleep(TIME)
+	
+
+
+	# Body Type
+	en = driver.find_element_by_xpath("//*[@id='question_form']/div[1]/input")
+	move = ActionChains(driver)
+	move.click_and_hold(en).move_by_offset(-250, 0).release().perform()
+	fileHandler.write(PREFIX_TAB + "Current Body Type : " + driver.find_element_by_xpath(
+		"//*[@id='question_form']/div[1]/output").text + NEW_LINE)
+	time.sleep(TIME)
+	en = driver.find_element_by_xpath("//*[@id='question_form']/div[1]/section/input")
+	move = ActionChains(driver)
+	move.click_and_hold(en).move_by_offset(100, 0).release().perform()
+	fileHandler.write(PREFIX_TAB + "Goal Body Type :" + driver.find_element_by_xpath(
+		"//*[@id='question_form']/div[1]/section/output").text + NEW_LINE)
+	en.send_keys(Keys.ENTER)
+	time.sleep(TIME)
+	
+	
+	
+
+	# DOB
+	month = "01"
+	day = "01"
+	year = "1980"
+	elem = driver.find_element_by_id("dob-month")
+	elem.send_keys(month)
+	elem = driver.find_element_by_id("dob-day")
+	elem.send_keys(day)
+	elem = driver.find_element_by_id("dob-year")
+	elem.send_keys(year)
+	fileHandler.write(PREFIX_TAB + "DOB : " + day + "/" + month + "/" + year + NEW_LINE)
+	elem.send_keys(Keys.ENTER)
+	time.sleep(TIME)
+	elem.send_keys(Keys.ENTER)
+	time.sleep(TIME)
+	
+
+	
+	# When will you take Protein Powder
+	time_protein = random.choice([0, 1, 2, 3, 4, 5, 6])
+	options = {
+		0: "During Exercise",
+		1: "After Waking Up",
+		2: "Before Exercise",
+		3: "After Exercise",
+		4: "Before Bed",
+		5: "I'm not sure",
+		6: "Whenever I can"
+	}
+	en = driver.find_element_by_xpath("//*[@id='question10choice" + str(time_protein) + "']")
+	en.click()
+	fileHandler.write(PREFIX_TAB + "Time to take Protein Powder : " + options[time_protein] + NEW_LINE)
+	en.send_keys(Keys.ENTER)
+	time.sleep(TIME)
+	
 	
 	# Flavor
 	flavor = random.choice([1, 2])

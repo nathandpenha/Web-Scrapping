@@ -4,9 +4,9 @@ driver = webdriver.Chrome('chromedriver.exe')
 #driver.maximize_window()
 driver.get("https://www.facebook.com")
 elem = driver.find_element_by_name("email")
-elem.send_keys("dpenhanathan@yahoo.in");
+elem.send_keys("");
 elem = driver.find_element_by_name("pass")
-elem.send_keys("*****");
+elem.send_keys("");
 elem.submit();
 driver.get('https://www.facebook.com/search/people/?q=SBI&epa=SERP_TAB')
 '''

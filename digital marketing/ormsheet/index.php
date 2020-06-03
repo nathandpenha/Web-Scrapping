@@ -117,7 +117,64 @@
         <br />
         <div id="result"></div>
     </div>
+    <br />
 
+    <br />
+    <br />
+    <br />
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            load_data();
+
+            function load_data(query) {
+                $.ajax({
+                    url: "fetch.php",
+                    method: "post",
+                    data: {
+                        query: query
+                    },
+                    success: function(data) {
+                        $('#result').html(data);
+                    }
+                });
+            }
+
+            $('#search_text').keyup(function() {
+                var search = $(this).val();
+                if (search != '') {
+                    load_data(search);
+                } else {
+                    load_data();
+                }
+            });
+        });
+
+        function myFunction2(id0, id1) {
+            var x = document.getElementById(id0);
+            x.style.display = "block";
+            var copyText = document.getElementById(id1);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999999)
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
+            x.style.display = "none";
+        }
+/* 
+--------carol-rebeiro---------
+*/
+        
+        
+    </script>
 </body>
 
 </html>
